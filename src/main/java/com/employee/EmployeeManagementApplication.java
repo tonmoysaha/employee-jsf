@@ -1,6 +1,5 @@
 package com.employee;
 
-import org.ocpsoft.rewrite.servlet.DispatcherType;
 import org.ocpsoft.rewrite.servlet.RewriteFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,6 +8,7 @@ import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 
 import javax.faces.webapp.FacesServlet;
+import javax.servlet.DispatcherType;
 import java.util.EnumSet;
 
 @SpringBootApplication
@@ -17,6 +17,8 @@ public class EmployeeManagementApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeeManagementApplication.class, args);
 	}
+	
+
 	@Bean
 	public ServletRegistrationBean servletRegistrationBean() {
 		FacesServlet servlet = new FacesServlet();
